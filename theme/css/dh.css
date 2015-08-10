@@ -1,0 +1,97 @@
+.row {
+  margin: 1em -0.5em 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.row:before,
+.row:after {
+  content: '';
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-1,
+.col-2 {
+  float: left;
+  padding: 0 0.5em;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.col-1 {
+  width: 50%;
+}
+.col-2 {
+  width: 100%;
+}
+
+
+
+
+.quote-big {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.button {
+  display: inline-block;
+  padding: .8em 1.7em 0.9em;
+  border-bottom: .4em solid #006c8f;
+  margin-top: 0;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008cba;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: #00ba62;
+  border-color: #008f4b;
+}
+.button:active {
+  margin-top: .4em;
+  border-bottom-width: 0;
+}
+.no-transition {
+  transition: none;
+}
+.cheating {
+  display: inline-block;
+  height: 4em;
+}
+
+.clicked-notice {
+  margin: 0 1em;
+  font-size: .8em;
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+.clicked {
+  opacity: 1;
+}
+.two-col-css-example pre {
+  min-height: 21em;
+}
+.two-col-css-example .col-1:first-child pre[data-lang]::after {
+  display: none;
+}
+
+img[src$='drummerhead.png'] {
+  width: auto !important;
+}
+slides > slide:not(.nobackground)::before {
+  background-image: url('../../images/drummerhead-logo-small.png');
+  background-size: 20px 24px;
+  opacity: .5;
+}

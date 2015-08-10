@@ -454,7 +454,7 @@ a {
 }
 /* line 271, ../scss/default.scss */
 a:hover {
-  color: black !important;
+  color: black;
 }
 
 /* line 276, ../scss/default.scss */

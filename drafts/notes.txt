@@ -1,0 +1,28 @@
+## Introduction - vemos que es animacion, por qué es útil, como es el tema con css y animaciónes.
+
+me presento, arranco describiendo qué es una animación (que constituye una animación), como las cosas en el espacio físico que rodea el humano son "naturalmente animadas" y como lo que un humano espera es en general una animación. Cuando tenemos un cambio de estado, es útil representar ese cambio de estado, y las animaciónes son útiles para transicionar de un estado al otro de una forma que sea comprensible y que te "lleve de la mano".
+
+Ahora que sabemos la explicacion tecnica de lo que es una animacion vemos queen css hay trans y anim y las dos constituyen animacion pero tecnicamente bla bla y ahroa vamos a ver transition
+
+
+## Css Transitions
+
+
+
+
+
+
+
+
+Things we can achieve (examples)
+How to
+More advanced stuff
+Css Animations
+Things we can achieve (examples)
+How to
+More advanced stuff
+Conclusion
+
+
+
+Bueno, yo quiero dar una char
