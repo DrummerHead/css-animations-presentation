@@ -132,10 +132,169 @@
     </article>
   </slide>
 
+  <slide>
+    <article>
+<pre class="prettyprint" data-lang="css">
+transition: [property] [duration] [timing-function] [delay];
+            all        250ms      ease              250ms
+            none       4s         ease-in           4s
+            unset      2500ms     ease-out          2500ms
+            inherit    etc        ease-in-out       etc
+            opacity               linear
+            width                 etc
+            color
+            etc
+</pre>
+
+      <ul>
+        <li>
+          <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties'>Animated Properties</a>
+        </li>
+        <li>
+          <a href='https://developer.mozilla.org/en/docs/Web/CSS/timing-function'>Timing Functions</a>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+<pre class="prettyprint" data-lang="css">
+.tooltip {
+  transition: opacity 200ms ease-in, background-color 500ms ease-in-out;
+}
+
+.footnote {
+  transition-property: min-height, color;
+  transition-duration: 1500ms;
+  transition-timing-function: ease-out;
+  transition-delay: 150ms;
+}
+
+.animate-all {
+  transition: all 250ms ease-out;
+}
+
+</pre>
+
+    </article>
+  </slide>
+
   <slide class="segue dark nobackground">
     <hgroup class="auto-fadein">
       <h2>CSS Animations</h2>
     </hgroup>
+  </slide>
+
+  <slide>
+    <article>
+      <span class='cheating'>
+        <a class='button' id='animated-button-example' href='http://mcdlr.com/'>Send</a>
+      </span>
+      <span class='clicked-notice'>Clicked button!</span>
+      <div class='row two-col-css-example'>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+.animated-button {
+  animation-name: angry;
+  animation-duration: 1500ms;
+  animation-fill-mode: both;
+}
+</pre>
+        </div>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+@keyframes angry {
+  40% {
+    padding: 1.7em 1em;
+    margin-left: 0;
+    border: 0 solid #8f2300;
+    font-size: .8em;
+    border-radius: 2.2em;
+    background-color: #ba2e00;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    margin-left: 22em;
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+</pre>
+        </div>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <dl>
+     <dt><a title="The animation-name CSS property specifies a list of animations that should be applied to the selected element. Each name indicates a @keyframes at-rule that defines the property values for the animation sequence." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name"><code>animation-name</code></a></dt>
+     <dd>none, arbitrary</dd>
+     <dt><a title="The animation-iteration-count CSS property defines the number of times an animation cycle should be played before stopping." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a></dt>
+     <dd>1, infinite, 2.5</dd>
+     <dt><a title="The animation-direction CSS property indicates whether the animation should play in reverse on alternate cycles." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction"><code>animation-direction</code></a></dt>
+     <dd>normal, reverse, alternate, alternate-reverse</dd>
+     <dt><a title="The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after it is executing." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a></dt>
+     <dd>none, forwards, backwards, both</dd>
+     <dt><a title="The animation-duration CSS property specifies the length of time that an animation should take to complete one cycle." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration"><code>animation-duration</code></a></dt>
+     <dd>0s, 120ms, 420ms</dd>
+     <dt><a title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay"><code>animation-delay</code></a></dt>
+     <dd>0s, 3s, 500ms</dd>
+     <dt><a title="The CSS animation-timing-function property specifies how a CSS animation should progress over the duration of each cycle. The possible values are one or several &lt;timing-function&gt;." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a></dt>
+     <dd>ease, ease-in, linear, cubic-bezier(0.1, 0.7, 1.0, 0.1), etc</dd>
+     <dt><a title="The animation-play-state CSS property determines whether an animation is running or paused. This can be queried to determine whether or not the animation is currently running. In addition, its value can be set to pause and resume playback of an animation." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a></dt>
+     <dd>running, paused</dd>
+    </dl>
+  </slide>
+
+  <slide>
+    <article>
+      <span class='cheating'>
+        <span class='round-and-restless' id='lala'></span>
+      </span>
+      <div class='row two-col-css-example'>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+.round-and-restless {
+  [...]
+
+  animation-name: restless;
+  animation-duration: 3500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
+
+</pre>
+        </div>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+@keyframes restless {
+  0% {
+    left: 0;
+    background-color: #f00;
+  }
+
+  16.66% { background-color: #ff7f00; }
+  33.33% { background-color: #ff0; }
+  50%    { background-color: #0f0; }
+  66.66% { background-color: #00f; }
+  83.33% { background-color: #4b0082; }
+
+  100% {
+    left: 32em;
+    background-color: #8f00ff;
+  }
+}
+</pre>
+        </div>
+      </div>
+    </article>
   </slide>
 
 

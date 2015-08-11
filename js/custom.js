@@ -3,6 +3,8 @@
 
   var exampleButtons = document.querySelectorAll('.example-button');
   var clickedNotices = document.querySelectorAll('.clicked-notice');
+  var exampleAnimationButton = document.getElementById('animated-button-example')
+  var roundAndRestless = document.querySelector('.round-and-restless');
 
   var affectAll = function(nodeList, fnctn){
     for(var i = 0, j = nodeList.length; i < j; i++){
@@ -21,5 +23,19 @@
       });
     });
   });
+
+  exampleAnimationButton.addEventListener('click', function(ev){
+    ev.preventDefault();
+    exampleAnimationButton.classList.add('animated-button');
+    setTimeout(function(){
+      exampleAnimationButton.classList.remove('animated-button');
+    }, '2400');
+  });
+
+  roundAndRestless.addEventListener('click', function(){
+    roundAndRestless.classList.toggle('pause-animation');
+  });
+
+
 
 })(window, document)

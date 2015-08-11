@@ -28,6 +28,19 @@
 }
 
 
+dl {
+  font-size: 1.1em;
+  line-height: 1.2;
+  -moz-columns: 2 auto;
+  -webkit-columns: 2 auto;
+}
+dt {
+  margin: 0 0 .375em;
+}
+dd {
+  margin: 0 0 1.25em;
+  min-height: 2.4em;
+}
 
 
 .quote-big {
@@ -68,6 +81,7 @@
 }
 .cheating {
   display: inline-block;
+  position: relative;
   height: 4em;
 }
 
@@ -94,4 +108,77 @@ slides > slide:not(.nobackground)::before {
   background-image: url('../../images/drummerhead-logo-small.png');
   background-size: 20px 24px;
   opacity: .5;
+}
+
+.animated-button {
+  animation-duration: 1500ms;
+  animation-name: angry;
+  animation-fill-mode: both;
+}
+
+@keyframes angry {
+  40% {
+    padding: 1.7em 1em;
+    margin-left: 0;
+    border: 0 solid #8f2300;
+    font-size: .8em;
+    border-radius: 2.2em;
+    background-color: #ba2e00;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    margin-left: 22em;
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+
+
+
+.round-and-restless {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4em;
+  height: 4em;
+  border-radius: 5em;
+  box-shadow: .1em .1em .1em rgba(200, 200, 200, .75);
+  cursor: pointer;
+
+  animation-name: restless;
+  animation-duration: 3500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
+
+@keyframes restless {
+  0% {
+    left: 0;
+    background-color: #f00;
+  }
+  16.66% {
+    background-color: #ff7f00;
+  }
+  33.33% {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #0f0;
+  }
+  66.66% {
+    background-color: #00f;
+  }
+  83.33% {
+    background-color: #4b0082;
+  }
+  100% {
+    left: 32em;
+    background-color: #8f00ff;
+  }
 }
