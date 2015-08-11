@@ -297,6 +297,75 @@ transition: [property] [duration] [timing-function] [delay];
     </article>
   </slide>
 
+  <slide>
+    <article>
+      <span class='cheating'>
+        <div class='animated-slides'>
+          <ul>
+            <li>
+              <p>This is content</p>
+            </li>
+            <li>
+              <p>More lovely content</p>
+            </li>
+            <li>
+              <p>Guess what&#8230; content</p>
+            </li>
+          </ul>
+        </div>
+      </span>
+      <div class='row two-col-css-example no-top-margin'>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+.animated-slides {
+  overflow: hidden;
+  position: relative;
+}
+.animated-slides ul {
+  width: 300%;
+
+  animation-duration: 10000ms;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+}
+.animated-slides li {
+  float: left;
+  width: 33.33333333%;
+  padding: 1em;
+}
+</pre>
+        </div>
+        <div class='col-1'>
+<pre class="prettyprint" data-lang="css">
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  70% {
+    margin-left: -100%;
+  }
+  80% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+</pre>
+        </div>
+      </div>
+    </article>
+  </slide>
+
 
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>

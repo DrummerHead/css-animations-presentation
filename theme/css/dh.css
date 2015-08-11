@@ -100,6 +100,9 @@ dd {
 .two-col-css-example .col-1:first-child pre[data-lang]::after {
   display: none;
 }
+.no-top-margin {
+  margin-top: 0;
+}
 
 img[src$='drummerhead.png'] {
   width: auto !important;
@@ -182,3 +185,75 @@ slides > slide:not(.nobackground)::before {
     background-color: #8f00ff;
   }
 }
+
+
+
+.animated-slides {
+  overflow: hidden;
+  position: relative;
+}
+.animated-slides ul,
+.animated-slides li {
+  box-sizing: border-box;
+}
+.animated-slides ul {
+  width: 300%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  animation-duration: 10000ms;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+}
+.animated-slides ul:before,
+.animated-slides ul:after {
+  content: '';
+  display: table;
+}
+.animated-slides ul:after {
+  clear: both;
+}
+.animated-slides li {
+  background-color: #eee;
+  padding: 1em;
+  float: left;
+  width: 33.33333333%;
+}
+.animated-slides ul > li::before {
+  content: none;
+}
+.animated-slides li:nth-child(1) {
+  background-color: #7effa2;
+}
+.animated-slides li:nth-child(2) {
+  background-color: #ffcdff;
+}
+.animated-slides li:nth-child(3) {
+  background-color: #ffe48f;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  70% {
+    margin-left: -100%;
+  }
+  80% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+
